@@ -1,0 +1,17 @@
+{
+  "name": "nexus-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nexus dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nexus": "^0.26.1",
+    "nexus-plugin-prisma": "^0.17.0"
+  }
+}
