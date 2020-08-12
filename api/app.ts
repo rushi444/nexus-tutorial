@@ -3,7 +3,10 @@ import { prisma } from 'nexus-plugin-prisma'
 
 settings.change({
     server: {
-        playground: true
+        playground: true,
+        cors: {
+            origin: '*'
+        }
     }
 })
 
