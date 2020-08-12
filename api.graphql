@@ -20,10 +20,10 @@ type Mutation {
 }
 
 type Post {
-  body: String
-  id: Int
-  published: Boolean
-  title: String
+  body: String!
+  id: Int!
+  published: Boolean!
+  title: String!
 }
 
 type Query {
