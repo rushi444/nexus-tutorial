@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nexus dev",
     "build": "npm -s run clean && nexus build",
-    "start": "node .nexus/build/api"
+    "start": "nexus dev"
   },
   "keywords": [],
   "author": "",
