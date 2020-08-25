@@ -63,16 +63,11 @@ schema.extendType({
 
         t.field('hello', {
             type: 'String',
+            args: {
+                user_id: schema.stringArg({required: true})
+            },
             resolve: async (parent, args, context, info) => {
-                const url = 'https://dev-7t102zrf.us.auth0.com/userinfo'
-                console.log(context.req.headers.authorization)
-                const user = await axios.get(url, {
-                    headers: {
-                        Authorization: context.req.headers.authorization
-                    }
-                })
-                console.log('user', user.data)
-
+                console.log(args.user_id)
                 return 'Hello World'
             }
         })

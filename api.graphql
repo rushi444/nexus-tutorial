@@ -16,7 +16,7 @@ scalar Json
 
 type Mutation {
   createDraft(body: String!, title: String!): Post
-  hello: String
+  hello(user_id: String!): String
   publish(draftId: Int!): Post
 }
 
