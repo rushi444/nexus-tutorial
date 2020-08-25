@@ -1,4 +1,5 @@
 import { schema } from 'nexus'
+import axios from 'axios'
 
 schema.objectType({
     name: 'Post',
@@ -58,6 +59,21 @@ schema.extendType({
                     },
                 })
             },
+        })
+
+        t.field('hello', {
+            type: 'String',
+            resolve: async (parent, args, context, info) => {
+                const url = 'https://dev-7t102zrf.us.auth0.com/userinfo'
+                const user = await axios.get(url, {
+                    headers: {
+                        Authorization: context.req.headers.authorization
+                    }
+                })
+                console.log('user', user.data)
+
+                return 'Hello World'
+            }
         })
     },
 })
