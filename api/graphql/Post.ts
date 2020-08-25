@@ -65,6 +65,7 @@ schema.extendType({
             type: 'String',
             resolve: async (parent, args, context, info) => {
                 const url = 'https://dev-7t102zrf.us.auth0.com/userinfo'
+                console.log(context.req.headers.authorization)
                 const user = await axios.get(url, {
                     headers: {
                         Authorization: context.req.headers.authorization

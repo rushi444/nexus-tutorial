@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "nexus": "^0.26.1",
+    "nexus-plugin-auth0": "^0.1.1",
     "nexus-plugin-prisma": "^0.17.0"
   }
 }
